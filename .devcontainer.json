@@ -1,0 +1,14 @@
+{
+  "name": "Data Analysis",
+  "image": "devpodhugoboss.azurecr.io/devpod-hugo-boss/analyst:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-renderers"
+      ]
+    }
+  },
+  "remoteUser": "hugoboss"
+}

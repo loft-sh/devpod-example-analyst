@@ -1,0 +1,27 @@
+{
+  "name": "Data Analysis",
+  "build": {
+    "Dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true,
+      "upgradePackages": true,
+      "username": "hugoboss"
+    },
+    "ghcr.io/devcontainers/features/python:1": {},
+    "./python-deps": {
+      "requirements": "pandas,torch"
+    }
+  },
+  "customizations": {
+    "devpod": {
+      "prebuildRepository": "ghcr.io/devpod-hugo-boss/analyst"
+    }
+  },
+  "remoteUser": "hugoboss"
+}

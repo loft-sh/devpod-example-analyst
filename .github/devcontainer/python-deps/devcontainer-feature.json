@@ -1,0 +1,16 @@
+{
+  "id": "python-deps",
+  "version": "0.0.0",
+  "name": "Python Dependencies",
+  "options": {
+    "requirements": {
+      "type": "string",
+      "default": "torch",
+      "description": "Specify all python dependencies that should be installed in this workspace separated with by a comma."
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/python"
+  ]
+}
