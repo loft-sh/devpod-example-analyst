@@ -11,7 +11,7 @@
       "installOhMyZsh": true,
       "installOhMyZshConfig": true,
       "upgradePackages": true,
-      "username": "hugoboss"
+      "username": "devpod"
     },
     "ghcr.io/devcontainers/features/python:1": {},
     "./python-deps": {
@@ -20,8 +20,8 @@
   },
   "customizations": {
     "devpod": {
-      "prebuildRepository": "ghcr.io/devpod-hugo-boss/analyst"
+      "prebuildRepository": "loftdevpod.azurecr.io/examples/devpod-example-analyst"
     }
   },
-  "remoteUser": "hugoboss"
+  "remoteUser": "devpod"
 }

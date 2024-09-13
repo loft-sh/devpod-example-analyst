@@ -1,6 +1,6 @@
 {
   "name": "Data Analysis",
-  "image": "devpodhugoboss.azurecr.io/devpod-hugo-boss/analyst:latest",
+  "image": "loftdevpod.azurecr.io/examples/devpod-example-analyst:latest",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -10,5 +10,5 @@
       ]
     }
   },
-  "remoteUser": "hugoboss"
+  "remoteUser": "devpod"
 }

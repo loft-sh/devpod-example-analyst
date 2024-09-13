@@ -38,7 +38,8 @@ jobs:
           username: ${{ secrets.AZURE_ACR_USERNAME }}
           password: ${{ secrets.AZURE_ACR_PASSWORD }}
       - run: |
-          devpod build . --devcontainer-path .github/devcontainer/devcontainer.json --repository "devpodhugoboss.azurecr.io/devpod-hugo-boss/analyst" --platform linux/amd64
+          REGISTRY_REPO="loftdevpod.azurecr.io/examples/devpod-example-analyst" 
+          devpod build . --devcontainer-path .github/devcontainer/devcontainer.json --repository $REGISTRY_REPO --platform linux/amd64
           # Change tag to `latest`
           ID=$(docker images --format "{{.ID}} {{.CreatedAt}} {{.Tag}}" | sort -rk 2 | grep "devpod" | awk 'NR==1{print $1}')
           echo "found image: $ID"
@@ -46,6 +47,5 @@ jobs:
             echo "Image ID empty, exiting"
             exit 0 
           fi 
-          docker image ls
-          docker tag $ID devpodhugoboss.azurecr.io/devpod-hugo-boss/analyst:latest
-          docker push devpodhugoboss.azurecr.io/devpod-hugo-boss/analyst:latest
+          docker tag $ID "$REGISTRY_REPO:latest"
+          docker push "$REGISTRY_REPO:latest"
