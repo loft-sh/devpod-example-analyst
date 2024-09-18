@@ -1,6 +1,6 @@
 {
   "name": "Data Analysis",
-  "image": "loftdevpod.azurecr.io/examples/devpod-example-analyst:latest",
+  "image": "bryankneisloft/devpod-example-analyst:latest",
   "customizations": {
     "vscode": {
       "extensions": [
