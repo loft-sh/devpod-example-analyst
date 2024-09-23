@@ -15,9 +15,10 @@ RUN apt-get -y install --no-install-recommends \
         python3-pip 
 
 # Install jupyter 
-RUN pip3 install notebook --break-system-packages
+RUN pip3 install notebook torch --break-system-packages
 
 # Install databricks CLI
 RUN curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
 RUN databricks -v
 
+ADD show_gpu.ipynb .
