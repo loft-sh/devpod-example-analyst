@@ -16,9 +16,11 @@
       "configureZshAsDefaultShell": false,
       "installOhMyZsh": false,
       "installOhMyZshConfig": false,
-      "upgradePackages": true
+      "upgradePackages": true,
+      "username": "devpod"
     },
     "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {}
   },
-  "postCreateCommand": "pre-commit install"
+  "remoteUser": "devpod",
+  "postCreateCommand": "env"
 }
