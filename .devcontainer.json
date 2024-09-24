@@ -10,5 +10,17 @@
       ]
     }
   },
-  "remoteUser": "devpod"
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "configureZshAsDefaultShell": false,
+      "installOhMyZsh": false,
+      "installOhMyZshConfig": false,
+      "upgradePackages": true,
+      "username": "devpod"
+    },
+    "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {}
+  },
+  "remoteUser": "devpod",
+  "postCreateCommand": "pre-commit install"
 }
