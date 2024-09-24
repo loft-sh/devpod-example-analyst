@@ -22,5 +22,5 @@
     "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {}
   },
   "remoteUser": "devpod",
-  "postCreateCommand": "env"
+  "postCreateCommand": "env && pre-commit install"
 }
